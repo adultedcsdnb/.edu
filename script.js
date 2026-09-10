@@ -24,7 +24,7 @@ const classSections = [
         links: [
             {
                 title: "Google Classroom",
-                url: "https://classroom.google.com/",
+                url: "dartlink.html",
                 description: "Open Google Classroom"
             },
 
