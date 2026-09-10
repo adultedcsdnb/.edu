@@ -1,0 +1,214 @@
+/* =========================
+   GENERAL
+   ========================= */
+
+:root {
+    --navy: #17324d;
+    --blue: #1769aa;
+    --light-blue: #eef7ff;
+    --background: #f4f7fa;
+    --white: #ffffff;
+    --text: #1f2933;
+    --muted: #5f6b76;
+    --border: #d6dee6;
+    --shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.5;
+}
+
+.container {
+    width: min(900px, 92%);
+    margin: 0 auto;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+.site-header {
+    background: var(--navy);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.site-header h1 {
+    margin: 0 0 8px;
+    font-size: clamp(34px, 6vw, 52px);
+}
+
+.site-header p {
+    margin: 0;
+    font-size: clamp(19px, 3vw, 25px);
+}
+
+
+/* =========================
+   MAIN CONTENT
+   ========================= */
+
+main {
+    padding: 30px 0 50px;
+}
+
+
+/* =========================
+   INSTRUCTIONS
+   ========================= */
+
+.instructions {
+    background: var(--white);
+    border-left: 6px solid var(--blue);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+
+    font-size: 20px;
+
+    box-shadow: var(--shadow);
+}
+
+.instructions strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+/* =========================
+   SECTIONS
+   ========================= */
+
+.link-section {
+    margin-bottom: 35px;
+}
+
+.link-section h2 {
+    color: var(--navy);
+    font-size: 30px;
+    margin: 0 0 14px;
+}
+
+
+/* =========================
+   LINK BUTTONS
+   ========================= */
+
+.links {
+    display: grid;
+    gap: 14px;
+}
+
+.class-link {
+    display: block;
+
+    background: var(--white);
+    color: var(--navy);
+
+    text-decoration: none;
+
+    border: 2px solid var(--border);
+    border-radius: 12px;
+
+    padding: 20px;
+
+    font-size: 23px;
+    font-weight: bold;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        background-color 0.15s ease,
+        border-color 0.15s ease,
+        transform 0.15s ease;
+}
+
+.class-link:hover {
+    background: var(--light-blue);
+    border-color: var(--blue);
+    transform: translateY(-2px);
+}
+
+.class-link:focus {
+    background: var(--light-blue);
+    border-color: var(--blue);
+    outline: 4px solid rgba(23, 105, 170, 0.25);
+}
+
+.class-link:active {
+    transform: translateY(0);
+}
+
+
+/* Description underneath link title */
+
+.class-link-description {
+    display: block;
+
+    margin-top: 5px;
+
+    color: var(--muted);
+
+    font-size: 16px;
+    font-weight: normal;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+    padding: 25px 20px;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .site-header {
+        padding: 28px 15px;
+    }
+
+    main {
+        padding-top: 20px;
+    }
+
+    .instructions {
+        font-size: 18px;
+        padding: 17px;
+    }
+
+    .link-section h2 {
+        font-size: 26px;
+    }
+
+    .class-link {
+        padding: 18px;
+        font-size: 21px;
+    }
+
+    .class-link-description {
+        font-size: 15px;
+    }
+}
